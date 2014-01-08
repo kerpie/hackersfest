@@ -1,1 +1,1 @@
-if(#{@status}){alert("Guardado");$('#formulario').slideUp("slow");$("#reg").text("Gracias por inscribirte #{@p.name}, \ntomaremos en cuenta tu sugerencia");}else{$("#reg").text("No se pudo guardar tu sugerencia, por favor intenta de nuevo");}
+if(#{@status}){$('#formulario').slideUp("slow");$("#reg").text("Gracias por inscribirte #{@p.name}, \ntomaremos en cuenta tu sugerencia");}else{$("#reg").text("No se pudo guardar tu sugerencia, por favor intenta de nuevo");}

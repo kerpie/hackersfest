@@ -6,15 +6,15 @@
         %span &#9776
       %ul#nav
         %li
-          %a{:href => "#titulo_hackers"} Hackers
+          =link_to "Hackers", "#titulo_hackers"
         %li
-          %a{:href => "#trata"} ¿De que trata?
+          =link_to "¿De que trata?", "#trata"
         %li
-          %a{:href => "#exponer"} ¿Yo También puedo exponer?
+          =link_to "¿Yo También puedo exponer?", "#exponer"
         %li
-          %a{:href => "#lugar"} ¿Lugar?
+          =link_to "¿Lugar?", "#lugar"
         %li
-          %a{:href => "#cronograma"} ¿Cronograma?
+          =link_to "¿Cronograma?", "#cronograma"
 %section#presentacion
   .wrapper2
     %h1 #HACKERS FEST
@@ -59,15 +59,7 @@
       %h3 Eduar Rubén
       =link_to "@educartoons", "http://www.twitter.com/educartoons" 
       %p
-        Nerd, melómano y lector voraz. Aunque trabaja en
-        el mundo tecnológico apuesta por la contracultura.
-    .expositor
-      %figure
-        =image_tag "avatar_kerry.jpg", alt: "Avatar Kerry", :title => "Kerry"
-      %h3 Kerry Pérez
-      =link_to "@kerpie", "http://www.twitter.com/kerpie"
-      %p
-        Programador Certificado Oracle, Desarrollador Android, Miembro de Lima Valley. Él ama Ruby on Rails.
+        Nerd, melómano y lector voraz. Aunque trabaja en el mundo tecnológico apuesta por la contracultura.
     .expositor
       %figure
         =image_tag "avatar_alonso.jpg", alt: ""
@@ -75,6 +67,13 @@
       =link_to "@_AlonsoCN", "http://www.twitter.com/_AlonsoCN"
       %p
         Ing. de Sistemas. Desarrollador Backend, Gamer, Skater, Zurdo. Fascinado por la creacion de videojuegos.
+    .expositor
+      %figure
+        =image_tag "avatar_kerry.jpg", alt: "Avatar Kerry", :title => "Kerry"
+      %h3 Kerry Pérez
+      =link_to "@kerpie", "http://www.twitter.com/kerpie"
+      %p
+        Programador Certificado Oracle, Desarrollador Android, amante de Ruby on Rails. Mobile Wizard.
     .expositor
       %figure
         =image_tag "avatar_jorge.jpg", alt: ""
@@ -89,7 +88,6 @@
       =link_to "#RicardoCorp", "https://www.facebook.com/rikardo.corp"
       %p
         Desarrollador Ninja de Aplicaciones en PHP con Codeigniter.
-        Ing. de Informática y Sistemas.
 %section#trata.parte
   .wrapper
     .trata
@@ -104,7 +102,7 @@
       %h2
         ¿Puedo yo también exponer?
       %p
-        El mundo tecnologico esta en constante evolución, si quieres compartir alguno de tus superpoderes con nosotros, bienvenido! Solo tienes que enviarnos un correo explicándonos brevemente con que tema puedes particiar y listo!. Envia tu correo a educartoons@gmail.com
+        El mundo tecnologico esta en constante evolución, si quieres compartir alguno de tus superpoderes con nosotros, bienvenido! Solo tienes que enviarnos un correo explicándonos brevemente con que tema puedes particiar y listo!. Envia tu correo a k4torce@gmail.com
 .rayitas
 %section#lugar.parte
   .wrapper
@@ -112,14 +110,37 @@
       %h2
         ¿Lugar?
       %p
-        Aún estamos en la búsqueda de un local
-        que nos brinde las características necesarias
-        para poder desarrollar el evento de manera
-        confortable.
-        Si conoces a alguien que nos pueda echar una
-        mano con esto. Escríbenos a educartoons@gmail.com
+        El evento se realizará el 18 de enero en el auditorio de la Facultad de Ingeniería de la Universidad Privada de Tacna, a las 9:00am. El evento es gratuito pero con cupo limitado ¡No olvides registrarte!
+      #map{style: "width: 300px; height: 300px;"}
 .rayitas
-%script{:src => "js/jquery.autosize.min.js"}
+%section#cronograma.parte
+  .wrapper
+    .cronograma
+      %h2
+        Cronograma
+      %ul
+        %li
+          %p
+            %span Node.js: Del browser al server
+            Jorge Pacora
+        %li
+          %p
+            %span Un echo al mundo con codeigniter
+            Ricardo Coronado
+        %li
+          %p
+            %span Front-end rockstar
+            Eduar Apaza
+        %li
+          %p
+            %span Videojuegos con LUA
+            Luis Alonso
+        %li
+          %p
+            %span Vida verde con Android
+            Kerry Perez
+.rayitas
+=javascript_include_tag "jquery.autosize.min.js"
 :javascript
   function login(){
     fb.login(function(){
@@ -180,6 +201,21 @@
     }
     pantalla.init();
 
+    var maps = new GMaps({
+      div: "#map",
+      lat: -18.004787,
+      lng: -70.2261124,
+    });
+
+    maps.addMarker({
+      lat: -18.004787,
+      lng: -70.2261124,
+      title: "Universidad Privada de Tacna",
+      infoWindow:{
+        content: "<p>HackersFest<br>18 de enero a las 9:00am</p>"
+      }
+    });
+
     fb.ready(function(){
       if(fb.logged){
         $("#reg").text("Bienvendo "+fb.user.name+", ya falta poco para el evento");
@@ -191,4 +227,17 @@
         });
       }
     });
+
+    $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 53
+        }, 1000);
+        return false;
+      }
+    }
+  });
   });

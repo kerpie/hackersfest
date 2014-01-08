@@ -49,20 +49,155 @@ section.parte div.trata{padding:20px 0 20px 0;width:100%;background-image:url(im
 @media screen and (max-width: 480px){section.parte div.trata h2{font-size:20px;text-align:center;margin:0}
 }section.parte div.trata p{color:#4e4e4e;font-family:Open Sans;font-size:18px;font-weight:400;line-height:30px;width:50%;}
 @media screen and (max-width: 480px){section.parte div.trata p{font-size:14px;min-width:100%}
-}section.parte div.puedo{padding:20px 0 20px 0;width:100%;background-image:url(image_path("puedo.png"));background-repeat:no-repeat;background-position:100px 10px;text-align:right;overflow:hidden;}
+}
+section.parte div.puedo{padding:20px 0 20px 0;width:100%;background-image:url(image_path("puedo.png"));background-repeat:no-repeat;background-position:100px 10px;text-align:right;overflow:hidden;}
 @media screen and (max-width: 480px){section.parte div.puedo{text-align:center;background-size:40% auto;background-position:center bottom}
 }section.parte div.puedo h2{color:#2c3e50;font-family:Open Sans;font-size:32px;font-weight:600;text-align:right;}
 @media screen and (max-width: 480px){section.parte div.puedo h2{font-size:20px;text-align:center;margin:0}
 }section.parte div.puedo p{color:#4e4e4e;float:right;font-family:Open Sans;font-size:18px;font-weight:400;line-height:30px;width:50%;}
 @media screen and (max-width: 480px){section.parte div.puedo p{font-size:14px;min-width:100%}
 }section.parte div.puedo p a{color:#2c3e50;text-decoration:underline}
-section.parte div.lugar{padding:20px 0 20px 0;width:100%;background-image:url(image_path("lugar.png"));background-repeat:no-repeat;background-position:right center;text-align:left;overflow:hidden;}
-@media screen and (max-width: 480px){section.parte div.lugar{text-align:center;background-size:50% auto;background-position:bottom center}
-}section.parte div.lugar h2{color:#2c3e50;font-family:Open Sans;font-size:32px;font-weight:600;text-align:left;}
-@media screen and (max-width: 480px){section.parte div.lugar h2{font-size:20px;text-align:center;margin:0}
-}section.parte div.lugar p{color:#4e4e4e;float:left;font-family:Open Sans;font-size:18px;font-weight:400;line-height:30px;max-width:50%;}
-@media screen and (max-width: 480px){section.parte div.lugar p{font-size:14px;min-width:100%}
-}footer{background-color:#272727;padding:20px 0;}
+
+section.parte div.cronograma{
+	padding:20px 0 20px 0;width:100%;
+	background-image:url(image_path("puedo.png"));
+	background-repeat:no-repeat;
+	background-position:100px 10px;
+	text-align:right;
+	overflow:hidden;
+}
+
+@media screen and (max-width: 480px){
+	section.parte div.cronograma{
+		text-align:center;
+		background-size:40% auto;
+		background-position:center bottom
+	}
+}
+
+section.parte div.cronograma h2{
+	color:#2c3e50;
+	font-family:Open Sans;
+	font-size:32px;
+	font-weight:600;
+	text-align:right;
+}
+@media screen and (max-width: 480px){
+	section.parte div.cronograma h2{
+		font-size:20px;
+		text-align:center;
+		margin:0
+	}
+}
+
+section.parte div.cronograma ul{
+	list-style: none;
+	padding: 0px;
+}
+section.parte div.cronograma ul li{
+	display: block;
+	padding: 0px;
+}
+section.parte div.cronograma ul li span{
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+section.parte div.cronograma p{
+	font-size: 15px;
+	font-weight: thin;
+	margin-top: 5px;
+}
+
+// section.parte div.cronograma p{
+// 	color:#4e4e4e;
+// 	float:right;
+// 	font-family:Open Sans;
+// 	font-size:18px;
+// 	font-weight:400;
+// 	line-height:30px;
+// 	width:50%;
+// }
+@media screen and (max-width: 480px){
+	section.parte div.cronograma p{
+		font-size:14px;
+		min-width:100%
+	}
+}
+
+section.parte div.cronograma p a{
+	color:#2c3e50;
+	text-decoration:underline
+}
+
+section.parte div.lugar{
+	padding:20px 0 20px 0;
+	width:100%;
+	background-image:url(image_path("lugar.png"));
+	background-repeat:no-repeat;
+	background-position:right center;
+	text-align:left;
+	overflow:hidden;
+}
+@media screen and (max-width: 480px){
+	section.parte div.lugar{
+		text-align:center;
+		background-size:50% auto;
+		background-position:bottom center
+	}
+}
+section.parte div.lugar h2{
+	color:#2c3e50;
+	font-family:Open Sans;
+	font-size:32px;
+	font-weight:600;
+	text-align:left;
+}
+@media screen and (max-width: 480px){
+	section.parte div.lugar h2{
+		font-size:20px;
+		text-align:center;
+		margin:0
+	}
+}
+section.parte div.lugar p{
+	color:#4e4e4e;
+	float:left;
+	font-family:Open Sans;
+	font-size:18px;
+	font-weight:400;
+	line-height:30px;
+	max-width:50%;
+	margin-right: 200px;
+}
+@media screen and (max-width: 480px){
+	section.parte div.lugar p{
+		font-size:14px;
+		min-width:100%;
+	}
+}
+section.parte div.lugar #map{
+	position: relative;
+	top: -50px;
+}
+@media screen and (max-width: 900px){
+	section.parte div.lugar #map{
+		position: relative;
+		top: 0px;		
+	}
+}
+@media screen and (max-width: 480px){
+	section.parte div.lugar #map{
+		position: relative;
+		top: 0px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+footer{background-color:#272727;padding:20px 0;}
 footer p{color:#767676;margin:0;font-family:Open Sans;font-weight:400;font-size:14px;text-align:center}
 div.rayitas{border-top:1px dashed #4e4e4e;margin-bottom:30px}
 .wrapper{width:1000px;margin:0 auto;}
