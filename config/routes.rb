@@ -7,6 +7,7 @@ Hackersfest::Application.routes.draw do
   #Participants
   get "participants/index" => "participants#index", as: :participants_index
   post "participants/create" => "participants#create", as: :participants_create
+  post "participants/check" => "participants#check_if_registered", as: :participants_check
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

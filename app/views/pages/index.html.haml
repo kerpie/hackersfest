@@ -218,7 +218,13 @@
 
     fb.ready(function(){
       if(fb.logged){
-        $("#reg").text("Bienvendo "+fb.user.name+", ya falta poco para el evento");
+        $.ajax({
+          type: "POST",
+          url: "#{participants_check_path}", 
+          data: {
+            fb_id: fb.user.id,
+          }
+        });
       }
       else{
         $('#reg').click(function(event){
