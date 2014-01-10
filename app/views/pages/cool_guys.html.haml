@@ -1,0 +1,18 @@
+%header.feedback
+	.wrapper
+		%h1
+			HACKERSFEST/
+			%span 
+				feedback
+%section#mensajes
+	.wrapper
+		%h2 Mensajes
+		- @people.each do |person|
+			%article
+				%figure
+					=image_tag person.image+"?type=large", :alt => "Avatar #{person.name}"
+				%div
+					%h3 
+						= person.name
+					%p
+						= person.suggestion

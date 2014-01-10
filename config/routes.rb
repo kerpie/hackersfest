@@ -3,6 +3,7 @@ Hackersfest::Application.routes.draw do
   root "pages#index"
 
   get "pages/index"
+  get "pages/cool_guys" => "pages#cool_guys", as: :cool_guys
 
   #Participants
   get "participants/index" => "participants#index", as: :participants_index

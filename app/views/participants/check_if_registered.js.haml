@@ -1,4 +1,3 @@
 var event_day = new Date("18 Jan 2014");
 var today = new Date();
-var message = "";
-if(!#{@p.nil?}){$("#reg").text("#{@message}");}else{console.log(fb.user);$("#fb_id").val(fb.user.id);$("#email").val(fb.user.email);$("#name").val(fb.user.name);$("#gender").val(fb.user.gender);$("#image").val(fb.user.picture);$("#username").val(fb.user.username);$("#formulario").slideDown("slow");$("#reg").text("Hola "+fb.user.name+", falta poco para completar el registro!");}
+if(!#{@p.nil?}){$("#reg").text("#{@message}");}else{console.log(fb.user);$("#fb_id").val(fb.user.id);$("#email").val(fb.user.email);$("#name").val(fb.user.name);$("#gender").val(fb.user.gender);$("#image").val(fb.user.picture);$("#username").val(fb.user.username);$("#formulario").slideDown("slow",function(){$(this).remove();});$("#reg").text("Hola "+fb.user.name+", falta poco para completar el registro!");}
