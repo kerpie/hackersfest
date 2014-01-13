@@ -19,13 +19,66 @@ section#formulario form textarea:hover{border:1px solid #ffa500}
 }section#formulario form input[type="submit"]{border:0;background-color:#2ecc71;border-radius:5px;border-bottom:7px solid #2bb565;color:#fff;display:block;font-family:Open Sans;font-size:16px;font-weight:400;margin:0 auto;margin-top:10px;padding:10px 0 10px 0;outline:none;text-transform:uppercase;width:406px;}
 @media screen and (max-width: 480px){section#formulario form input[type="submit"]{width:95%}
 }section#presentacion{background-color:#000;color:#fff;text-align:center;background-image:url(image_path("equipo.jpg"));background-position:center center;background-repeat:no-repeat;height:362px;margin-top:52px;}
-section#presentacion h1{display:inline-block;margin:0 auto;font-family:Open Sans;font-weight:600;font-size:50px;padding:80px 0 0 0}
-section#presentacion p{background-color:rgba(0,0,0,0.3);font-size:18px;font-family:Open Sans;margin:0 auto;padding:10px 15px 10px 15px;position:relative;text-align:center;width:70%;}
-@media screen and (max-width: 900px){section#presentacion p{padding:0;width:100%}
-}@media screen and (max-width: 480px){section#presentacion p{font-size:14px;padding:0;width:100%}
-}@media screen and (max-width: 480px){section#presentacion p span{display:none}
-}section#presentacion a{background-color:#06c;border-radius:7px;border-bottom:7px solid #0958a8;color:#fff;display:inline-block;padding:15px 30px 15px 30px;position:relative;top:70px;font-size:14px;text-transform:uppercase;transition:.2s background;}
-@media screen and (max-width: 480px){section#presentacion a{top:40px;font-size:14px}
+section#presentacion h1{
+	display:inline-block;
+	margin:0 auto;
+	font-family:Open Sans;
+	font-weight:600;
+	font-size:50px;
+	padding:50px 0 30px 0;
+}
+section#presentacion p{
+	background-color:rgba(0,0,0,0.8);
+	font-size:18px;
+	font-family:Open Sans;
+	margin:0 auto;
+	padding:10px 15px 10px 15px;
+	position:relative;
+	text-align:center;
+	width:70%;
+}
+@media screen and (max-width: 900px){
+	section#presentacion p{
+		padding:0;
+		width:100%
+	}
+}
+@media screen and (max-width: 480px){
+	section#presentacion p{
+		font-size:14px;
+		padding:0;
+		width:100%
+	}
+}
+@media screen and (max-width: 480px){
+	section#presentacion p span{
+		display:none
+	}
+}
+section#presentacion a{
+	background-color:#06c;
+	border-radius:7px;
+	border-bottom:7px solid #0958a8;
+	color:#fff;
+	display:inline-block;
+	padding:15px 30px 15px 30px;
+	position:relative;
+	top:25px;
+	font-size:14px;
+	text-transform:uppercase;
+	transition:.2s background;
+}
+@media screen and (max-width: 900px){
+	section#presentacion a{
+		top: 80px;
+	}
+}
+@media screen and (max-width: 650px){
+	section#presentacion a{
+		top: 10px;
+	}
+}
+@media screen and (max-width: 480px){section#presentacion a{top:90px;font-size:14px}
 }section#presentacion a:hover{background-color:#0b5fb3}
 #reg{text-decoration: none;}
 section#tecnologias{background-color:#fff;text-align:center;font-family:Open Sans;padding-top:30px;}
@@ -113,3 +166,26 @@ div.rayitas{border-top:1px dashed #4e4e4e;margin-bottom:30px}
 #crear-admins form input[type="text"]{display:block;background-color:#2c3e50;border:0;padding:5px 10px 5px 10px;color:#cdd5de;outline:none;border-radius:4px}
 #crear-admins form input[type="submit"]{background-color:#3498db;border:0;border-radius:4px;border-bottom:6px solid #338cc8;color:#fff;padding:10px 40px 10px 40px;margin-top:10px;transition:.2s background;}
 #crear-admins form input[type="submit"]:hover{background-color:#39a7f0;border-bottom:6px solid #3498db}
+
+section#presentacion p.fecha{
+	color:#FFF;
+	background-color:#FF9700;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+section#contador{
+	width: 100%;
+	margin: 0px;
+}
+
+section#contador p{
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	background: #BEF73E;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 20px 0px;
+}

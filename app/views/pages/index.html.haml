@@ -21,6 +21,8 @@
     %p
       Hackers Fest es un evento para mostrar tecnología, compartir tecnología, respirar tecnología y hablar sobre tecnología ¿ya dije que nos gusta la tecnología?.
       %span Ven y comparte con nuestros héroes tus conocimientos y descubre porque nos fascina tanto lo que hacemos
+    %p.fecha
+      18 de Enero - Auditorio Facultad de Ingenieria UPT
     =link_to "Registrarse", "#", id: "reg", class: "registrarse"
 %section#formulario
   .wrapper
@@ -47,6 +49,9 @@
       =image_tag "icono_nodejs.jpg", alt: "Node.js", :title => "Node.js"
     %figure
       =image_tag "icono_ruby.jpg", alt: "Ruby", :title => "Ruby"
+%section#contador 
+  %p
+    #{@people + 50} futuros hackers se han inscrito al evento!
 %section#titulo_hackers
   .wrapper
     %h2
@@ -95,6 +100,13 @@
       =link_to "@angelolev", "http://www.twitter.com/angelolev"
       %p
         CEO & Fundador de Innodesign. Tweeteo sobre tecnologia. 
+    .expositor
+      %figure
+        =image_tag "avatar_jesus.jpg", alt: ""
+      %h3 Jesus Mariaca
+      =link_to "@JesusSempai", "http://www.twitter.com/JesusSempai"
+      %p
+        Scrum master. Desarrollador de dia, de noche, en eclipse, temblores... 24/7!.
 %section#trata.parte
   .wrapper
     .trata
@@ -150,6 +162,10 @@
           %p
             %span Usabilidad Web 
             Angelo Leva
+        %li
+          %p
+            %span Scrum love!
+            Jesus Mariaca
 .rayitas
 =javascript_include_tag "jquery.autosize.min.js"
 :javascript
@@ -170,6 +186,7 @@
   }
 :javascript
   $(document).ready(function(){
+
     var n = '#nav', no = 'nav-open';
     $('#nav-menu').click(function(event){
       event.preventDefault();
